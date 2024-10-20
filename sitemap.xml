@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://ve7ppe.ca/categories/</loc>
+    <loc>https://ve7ppe.github.io/categories/</loc>
   </url><url>
-    <loc>http://ve7ppe.ca/tags/</loc>
+    <loc>https://ve7ppe.github.io/tags/</loc>
   </url><url>
-    <loc>http://ve7ppe.ca/</loc>
+    <loc>https://ve7ppe.github.io/</loc>
   </url>
 </urlset>

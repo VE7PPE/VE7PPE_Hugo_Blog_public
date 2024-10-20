@@ -2,12 +2,12 @@
   xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>VE7PPE Radio Ramblings</title>
-    <link>http://ve7ppe.ca/</link>
+    <link>https://ve7ppe.github.io/</link>
     <description>Recent content on VE7PPE Radio Ramblings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-        <atom:link href="http://ve7ppe.ca/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://ve7ppe.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
