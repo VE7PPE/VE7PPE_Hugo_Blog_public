@@ -2,10 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ve7ppe.github.io/VE7PPE_Hugo_Blog_public/</loc>
+    <lastmod>2024-10-27T11:36:31-07:00</lastmod>
+  </url><url>
+    <loc>https://ve7ppe.github.io/VE7PPE_Hugo_Blog_public/pages/about/</loc>
+    <lastmod>2024-10-27T11:36:31-07:00</lastmod>
+  </url><url>
+    <loc>https://ve7ppe.github.io/VE7PPE_Hugo_Blog_public/pages/</loc>
+    <lastmod>2024-10-27T11:36:31-07:00</lastmod>
+  </url><url>
+    <loc>https://ve7ppe.github.io/VE7PPE_Hugo_Blog_public/posts/dmr_adventures-taking_the_plunge/</loc>
+    <lastmod>2024-10-20T07:46:31-07:00</lastmod>
+  </url><url>
+    <loc>https://ve7ppe.github.io/VE7PPE_Hugo_Blog_public/posts/</loc>
+    <lastmod>2024-10-20T07:46:31-07:00</lastmod>
+  </url><url>
     <loc>https://ve7ppe.github.io/VE7PPE_Hugo_Blog_public/categories/</loc>
   </url><url>
     <loc>https://ve7ppe.github.io/VE7PPE_Hugo_Blog_public/tags/</loc>
-  </url><url>
-    <loc>https://ve7ppe.github.io/VE7PPE_Hugo_Blog_public/</loc>
   </url>
 </urlset>
