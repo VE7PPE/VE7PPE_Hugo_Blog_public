@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ham Radio Musings - VE7PPE</title>
-    <link>ve7ppe-hugo-blog-public.pages.dev/</link>
+    <link>https://ve7ppe-hugo-blog-public.pages.dev/</link>
     <description>Recent content on Ham Radio Musings - VE7PPE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 27 Oct 2024 14:16:31 -0700</lastBuildDate>
-    <atom:link href="ve7ppe-hugo-blog-public.pages.dev/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ve7ppe-hugo-blog-public.pages.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DMR Adventures: Taking the DMR Plunge</title>
-      <link>ve7ppe-hugo-blog-public.pages.dev/posts/dmr_adventures-taking_the_plunge/</link>
+      <link>https://ve7ppe-hugo-blog-public.pages.dev/posts/dmr_adventures-taking_the_plunge/</link>
       <pubDate>Sun, 27 Oct 2024 14:16:31 -0700</pubDate>
-      <guid>ve7ppe-hugo-blog-public.pages.dev/posts/dmr_adventures-taking_the_plunge/</guid>
+      <guid>https://ve7ppe-hugo-blog-public.pages.dev/posts/dmr_adventures-taking_the_plunge/</guid>
       <description>Having a number of analogue VHF/UHF radios, and spending most/all of my time on HF, I really didn&amp;rsquo;t see the need to branch into digital VHF/UHF.&#xA;A few things fueled my curiosity this past Spring:&#xA;HF SSB voice was not fun. I run QRP+ by choice, like low power energy portable, and I get tired of competing with foot stomping linear activating massive beam stations to just hear one side of a conversation.</description>
     </item>
   </channel>
