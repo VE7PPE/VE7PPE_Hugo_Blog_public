@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Ham Radio Musings - VE7PPE</title>
-    <link>https://ve7ppe.github.io/VE7PPE_Hugo_Blog_public/tags/</link>
+    <link>ve7ppe-hugo-blog-public.pages.dev/tags/</link>
     <description>Recent content in Tags on Ham Radio Musings - VE7PPE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://ve7ppe.github.io/VE7PPE_Hugo_Blog_public/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="ve7ppe-hugo-blog-public.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
