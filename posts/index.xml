@@ -4,16 +4,23 @@
     <title>Posts on Ham Radio Musings - VE7PPE</title>
     <link>https://ve7ppe-hugo-blog-public.pages.dev/posts/</link>
     <description>Recent content in Posts on Ham Radio Musings - VE7PPE</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Oct 2024 14:16:31 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 27 Dec 2024 09:06:00 -0700</lastBuildDate>
     <atom:link href="https://ve7ppe-hugo-blog-public.pages.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FreeBSD Adventures - installing YAAC APRS w/ TH-D72</title>
+      <link>https://ve7ppe-hugo-blog-public.pages.dev/posts/freebsd_adventures-yaac_aprs_th-d72/</link>
+      <pubDate>Fri, 27 Dec 2024 09:06:00 -0700</pubDate>
+      <guid>https://ve7ppe-hugo-blog-public.pages.dev/posts/freebsd_adventures-yaac_aprs_th-d72/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;p&gt;I&amp;rsquo;m returning to FreeBSD after almost 10 years using Debian/Fedora for ham field laptop.  Its been an expected return with having to compile from source and/or search for obscure packages to get things to work.&lt;/p&gt;&#xA;&lt;p&gt;YAAC is one of the first ham programs to get installed to my older laptop with a fresh install of FreeBSD 14.2 running a XFCE desktop with 1Tb SSD.  Through trial and error, here are my steps to get YAAC communicating with both my GPS and TH-D72:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>DMR Adventures: Taking the DMR Plunge</title>
       <link>https://ve7ppe-hugo-blog-public.pages.dev/posts/dmr_adventures-taking_the_plunge/</link>
       <pubDate>Sun, 27 Oct 2024 14:16:31 -0700</pubDate>
       <guid>https://ve7ppe-hugo-blog-public.pages.dev/posts/dmr_adventures-taking_the_plunge/</guid>
-      <description>Having a number of analogue VHF/UHF radios, and spending most/all of my time on HF, I really didn&amp;rsquo;t see the need to branch into digital VHF/UHF.&#xA;A few things fueled my curiosity this past Spring:&#xA;HF SSB voice was not fun. I run QRP+ by choice, like low power energy portable, and I get tired of competing with foot stomping linear activating massive beam stations to just hear one side of a conversation.</description>
+      <description>&lt;hr&gt;&#xA;&lt;p&gt;Having a number of analogue VHF/UHF radios, and spending most/all of my time on HF, I really didn&amp;rsquo;t see the need to branch into digital VHF/UHF.&lt;/p&gt;&#xA;&lt;p&gt;A few things fueled my curiosity this past Spring:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;HF SSB voice was not fun.  I run QRP+ by choice, like low power energy portable, and I get tired of competing with foot stomping linear activating massive beam stations to just hear one side of a conversation.  Cubic $/equipment/power.  Yet I missed the conversations&lt;/li&gt;&#xA;&lt;li&gt;Almost complete silence of the local analogue repeaters.  There was a daily morning 2m net from Port Angeles that was more of a round-table that was nice to hear others during COVID lock down, but it has disappeared from the airwaves.  The few other local nets are quite dry (boring cryptic) check-ins, aka I had no interest in taking the time to participate&lt;/li&gt;&#xA;&lt;li&gt;Because we were putting our Victoria house on the market, and planned to move to the North Okanagan in BC, I had packed all my HF gear and pulled my EFRW HF antenna down.&lt;/li&gt;&#xA;&lt;li&gt;I kept my Kenwood TH-D72 out to maybe play with some APRS, packet, or Winmail.  But I ultimately found it not very satisfying, I wanted to hear voices and speak with fellow hams&lt;/li&gt;&#xA;&lt;li&gt;I decided to reread up on the non-HF digital modes, including D-Star, Fusion, and DMR.  My FT-991A does Fusion, so started there, but I am a many decades Unix and Open-Source user/sysadmin. Zero interest in proprietary software/hardware if possible, particularly running exclusively in the Windows environment.  Been burned by lock-in in the past&lt;/li&gt;&#xA;&lt;li&gt;Over the years, D-Star has intrigued me, but just couldn&amp;rsquo;t justify the cost of ICOM D-Star radio that provided the full feature set including high-speed data&lt;/li&gt;&#xA;&lt;li&gt;Local ham had an Anytone 878UVII+ for sale that he only used in analogue as support for the local marathon running events. It was pristine and still in its box with a hand mic. The AnytoneUVII+ would be a solid foundation to start my DMR adventures&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;So went full in studying up on DMR and the Anytone 878 radio, sold myself on the &amp;ldquo;need&amp;rdquo; for another radio, and bought the radio with barely a clue of even how to use the radio.  Learned it had GPS and BT, worked on APRS &amp;amp; D-APRS, but had no idea how to program it or how to even get on a local DMR repeater.  Jumping in the deep end here.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

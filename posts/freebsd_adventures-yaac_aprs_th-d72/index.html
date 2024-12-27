@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" >
   <head>
-  <title>Dmr adventures taking the dmr plunge | Ham Radio Musings - VE7PPE</title>
+  <title>Free bsd adventures installing yaac aprs w th d72 | Ham Radio Musings - VE7PPE</title>
   <meta charset='utf-8'>
   <meta name="viewport" content ="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,13 +12,12 @@
 <meta name="keywords" content="Ham Radio Musings - VE7PPE">
 <meta property="og:locale" content='en_US'>
 <meta property="og:type" content="article">
-<meta property="og:title" content="DMR Adventures: Taking the DMR Plunge">
+<meta property="og:title" content="FreeBSD Adventures - installing YAAC APRS w/ TH-D72">
 <meta property="og:description" content="
-Having a number of analogue VHF/UHF radios, and spending most/all of my time on HF, I really didn&rsquo;t see the need to branch into digital VHF/UHF.
-A few">
-<meta property="og:url" content="https://ve7ppe-hugo-blog-public.pages.dev/posts/dmr_adventures-taking_the_plunge/">
-<meta property="og:image" content="https://ve7ppe-hugo-blog-public.pages.dev/images/images/Anytone-878UVII&#43;_th-1617108850.jpg">
-<link rel="canonical" href="https://ve7ppe-hugo-blog-public.pages.dev/posts/dmr_adventures-taking_the_plunge/">
+I&rsquo;m returning to FreeBSD after almost 10 years using Debian/Fedora for ham field laptop.  Its been an expected return with having to compile from source">
+<meta property="og:url" content="https://ve7ppe-hugo-blog-public.pages.dev/posts/freebsd_adventures-yaac_aprs_th-d72/">
+<meta property="og:image" content="https://ve7ppe-hugo-blog-public.pages.dev/images/images/freebsd_3.gif">
+<link rel="canonical" href="https://ve7ppe-hugo-blog-public.pages.dev/posts/freebsd_adventures-yaac_aprs_th-d72/">
 
 <link rel="apple-touch-icon" sizes="180x180" href='https://ve7ppe-hugo-blog-public.pages.dev/apple-touch-icon.png'>
 <link rel="icon" type="image/png" sizes="32x32" href='https://ve7ppe-hugo-blog-public.pages.dev/favicon-32x32.png'>
@@ -51,29 +50,55 @@ A few">
     <main>
       
   <div class="wrap mt post">
-    <div><p class=post_date>27. October 2024</p>
-      <h1 class="post_title">DMR Adventures: Taking the DMR Plunge</h1>
+    <div><p class=post_date>27. December 2024</p>
+      <h1 class="post_title">FreeBSD Adventures - installing YAAC APRS w/ TH-D72</h1>
       <div class="post_body">
         <div class="post_inner">
         
         
-          <img src="https://ve7ppe-hugo-blog-public.pages.dev/images/Anytone-878UVII&#43;_th-1617108850.jpg" alt="images/Anytone-878UVII&#43;_th-1617108850.jpg" class="post_thumbnail">
+          <img src="https://ve7ppe-hugo-blog-public.pages.dev/images/freebsd_3.gif" alt="images/freebsd_3.gif" class="post_thumbnail">
         
           <hr>
-<p>Having a number of analogue VHF/UHF radios, and spending most/all of my time on HF, I really didn&rsquo;t see the need to branch into digital VHF/UHF.</p>
-<p>A few things fueled my curiosity this past Spring:</p>
+<p>I&rsquo;m returning to FreeBSD after almost 10 years using Debian/Fedora for ham field laptop.  Its been an expected return with having to compile from source and/or search for obscure packages to get things to work.</p>
+<p>YAAC is one of the first ham programs to get installed to my older laptop with a fresh install of FreeBSD 14.2 running a XFCE desktop with 1Tb SSD.  Through trial and error, here are my steps to get YAAC communicating with both my GPS and TH-D72:</p>
+<ol>
+<li>$ su -</li>
+<li># pw groupmod wheel -m USER</li>
+<li># pkg install java/openjdk8 [tried openjdk22 &ndash;&gt; 11, all fail to find jssc, aka no serial ports.  Both YAAC &amp; FreeBSD jssc lib not found &gt;openjdk8]</li>
+<li># pkg install comms/java-simple-serial-connector [&gt;11yrs old, is from source for fork used by YAAC]</li>
+<li># pkg install gpsd</li>
+<li>plug in GPS
 <ul>
-<li>HF SSB voice was not fun.  I run QRP+ by choice, like low power energy portable, and I get tired of competing with foot stomping linear activating massive beam stations to just hear one side of a conversation.  Cubic $/equipment/power.  Yet I missed the conversations</li>
-<li>Almost complete silence of the local analogue repeaters.  There was a daily morning 2m net from Port Angeles that was more of a round-table that was nice to hear others during COVID lock down, but it has disappeared from the airwaves.  The few other local nets are quite dry (boring cryptic) check-ins, aka I had no interest in taking the time to participate</li>
-<li>Because we were putting our Victoria house on the market, and planned to move to the North Okanagan in BC, I had packed all my HF gear and pulled my EFRW HF antenna down.</li>
-<li>I kept my Kenwood TH-D72 out to maybe play with some APRS, packet, or Winmail.  But I ultimately found it not very satisfying, I wanted to hear voices and speak with fellow hams</li>
-<li>I decided to reread up on the non-HF digital modes, including D-Star, Fusion, and DMR.  My FT-991A does Fusion, so started there, but I am a many decades Unix and Open-Source user/sysadmin. Zero interest in proprietary software/hardware if possible, particularly running exclusively in the Windows environment.  Been burned by lock-in in the past</li>
-<li>Over the years, D-Star has intrigued me, but just couldn&rsquo;t justify the cost of ICOM D-Star radio that provided the full feature set including high-speed data</li>
-<li>Local ham had an Anytone 878UVII+ for sale that he only used in analogue as support for the local marathon running events. It was pristine and still in its box with a hand mic. The AnytoneUVII+ would be a solid foundation to start my DMR adventures</li>
+<li>note USB port, /dev/ttyU0 on my laptop</li>
 </ul>
-<p>So went full in studying up on DMR and the Anytone 878 radio, sold myself on the &ldquo;need&rdquo; for another radio, and bought the radio with barely a clue of even how to use the radio.  Learned it had GPS and BT, worked on APRS &amp; D-APRS, but had no idea how to program it or how to even get on a local DMR repeater.  Jumping in the deep end here.</p>
-<p>DMR has a steep learning curve between programming the radio, building a hotspot, accessing local repeaters, finding TalkGroups and understanding the flow of QSOs.  Sounds like modern Ham Radio, sign me up.</p>
-<p>So far DMR has lived up to its billing, provides a DX type of SSB-like voice with a simple low cost HT.  Perfect for many hams - apartment dwellers, older hams in assisted living, mobile, or having particular interests to discuss using radio to reach out around the world.</p>
+</li>
+<li>plug in TH-D72
+<ul>
+<li>running packet12 mode
+<ul>
+<li><a href="https://www.ka2ddo.org/ka2ddo/YAACdocs/config_kenwood.html">https://www.ka2ddo.org/ka2ddo/YAACdocs/config_kenwood.html</a></li>
+<li><a href="https://www.ka2ddo.org/ka2ddo/YAACdocs/config_serialtnc.html">https://www.ka2ddo.org/ka2ddo/YAACdocs/config_serialtnc.html</a></li>
+</ul>
+</li>
+<li>/dev/ttyU1 on my laptop</li>
+</ul>
+</li>
+<li># chmod 660 /dev/ttyU0</li>
+<li># chmod 660 /dev/ttyU1</li>
+<li># vi /etc/rc.conf
+<ul>
+<li>add: gpsd_enable=&ldquo;YES&rdquo;</li>
+<li>add: gpsd_device=&quot;/dev/ttyU0&quot; [check your usb port, I will build a udev style rule for the GPS under FreeBSD]</li>
+</ul>
+</li>
+<li># exit</li>
+<li>download YAAC to /home/user/Software-local/YAAC</li>
+<li>$ unzip YAAC</li>
+<li>$ cd YAAC</li>
+<li>$ java -jar YAAC.jar [-debug if needed, will fill logs &amp; slow program]</li>
+<li>config as needed</li>
+</ol>
+<p>See Andrew P., Developer of YAAC, comments at <a href="https://groups.io/g/yaac-users/topic/yaac_under_freebsd_14_2/110289214">https://groups.io/g/yaac-users/topic/yaac_under_freebsd_14_2/110289214</a>  I will continue to test/tune this process with the newest JSSC fork and newer openjdk version.  Will report back my findings at groups.io and here</p>
 
         </div>
         <div class="post_extra mb-2">
