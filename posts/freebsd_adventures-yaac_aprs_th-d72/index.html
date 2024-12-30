@@ -63,13 +63,13 @@ I&rsquo;m returning to FreeBSD after almost 10 years using Debian/Fedora for ham
 <p>YAAC is one of the first ham programs to get installed to my older laptop with a fresh install of FreeBSD 14.2 running a XFCE desktop with 1Tb SSD.  Through trial and error, here are my steps to get YAAC communicating with both my GPS and TH-D72:</p>
 <ol>
 <li>$ su -</li>
-<li># pw groupmod wheel -m USER</li>
+<li># pw groupmod dialer -m USER</li>
 <li># pkg install java/openjdk8 [tried openjdk22 &ndash;&gt; 11, all fail to find jssc, aka no serial ports.  Both YAAC &amp; FreeBSD jssc lib not found &gt;openjdk8]</li>
 <li># pkg install comms/java-simple-serial-connector [&gt;11yrs old, is from source for fork used by YAAC]</li>
 <li># pkg install gpsd</li>
 <li>plug in GPS
 <ul>
-<li>note USB port, /dev/ttyU0 on my laptop</li>
+<li>note USB port, /dev/cuaU0 on my laptop</li>
 </ul>
 </li>
 <li>plug in TH-D72
@@ -80,15 +80,13 @@ I&rsquo;m returning to FreeBSD after almost 10 years using Debian/Fedora for ham
 <li><a href="https://www.ka2ddo.org/ka2ddo/YAACdocs/config_serialtnc.html">https://www.ka2ddo.org/ka2ddo/YAACdocs/config_serialtnc.html</a></li>
 </ul>
 </li>
-<li>/dev/ttyU1 on my laptop</li>
+<li>/dev/cuaU1 on my laptop</li>
 </ul>
 </li>
-<li># chmod 660 /dev/ttyU0</li>
-<li># chmod 660 /dev/ttyU1</li>
 <li># vi /etc/rc.conf
 <ul>
 <li>add: gpsd_enable=&ldquo;YES&rdquo;</li>
-<li>add: gpsd_device=&quot;/dev/ttyU0&quot; [check your usb port, I will build a udev style rule for the GPS under FreeBSD]</li>
+<li>add: gpsd_device=&quot;/cuaU0&quot; [check your usb port, I will build a udev style rule for the GPS under FreeBSD]</li>
 </ul>
 </li>
 <li># exit</li>
