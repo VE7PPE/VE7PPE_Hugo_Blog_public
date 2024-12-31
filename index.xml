@@ -13,7 +13,7 @@
       <link>https://ve7ppe-hugo-blog-public.pages.dev/posts/freebsd_adventures-yaac_aprs_th-d72/</link>
       <pubDate>Fri, 27 Dec 2024 09:06:00 -0700</pubDate>
       <guid>https://ve7ppe-hugo-blog-public.pages.dev/posts/freebsd_adventures-yaac_aprs_th-d72/</guid>
-      <description>&lt;hr&gt;&#xA;&lt;p&gt;I&amp;rsquo;m returning to FreeBSD after almost 10 years using Debian/Fedora for ham field laptop.  Its been an expected return with having to compile from source and/or search for obscure packages to get things to work.&lt;/p&gt;&#xA;&lt;p&gt;YAAC is one of the first ham programs to get installed to my older laptop with a fresh install of FreeBSD 14.2 running a XFCE desktop with 1Tb SSD.  Through trial and error, here are my steps to get YAAC communicating with both my GPS and TH-D72:&lt;/p&gt;</description>
+      <description>&lt;hr&gt;&#xA;&lt;h6 id=&#34;update-dec-31-2024-1330&#34;&gt;Update Dec-31-2024-1330&lt;/h6&gt;&#xA;&lt;p&gt;Corrected a few of the steps to make it all work properly.  Also testing a new update of YAAC that includes FreeBSD specific look-up for local JSSC.  See steps below to update the OpenJDK version from V8&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;I&amp;rsquo;m returning to FreeBSD after almost 10 years using Debian/Fedora for ham field laptop.  Its been an expected return with having to compile from source and/or search for obscure packages to get things to work.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DMR Adventures: Taking the DMR Plunge</title>

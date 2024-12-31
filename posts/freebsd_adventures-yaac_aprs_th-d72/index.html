@@ -14,7 +14,8 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="FreeBSD Adventures - installing YAAC APRS w/ TH-D72">
 <meta property="og:description" content="
-I&rsquo;m returning to FreeBSD after almost 10 years using Debian/Fedora for ham field laptop.  Its been an expected return with having to compile from source">
+Update Dec-31-2024-1330
+Corrected a few of the steps to make it all work properly.  Also testing a new update of YAAC that includes FreeBSD specific look-up">
 <meta property="og:url" content="https://ve7ppe-hugo-blog-public.pages.dev/posts/freebsd_adventures-yaac_aprs_th-d72/">
 <meta property="og:image" content="https://ve7ppe-hugo-blog-public.pages.dev/images/images/freebsd_3.gif">
 <link rel="canonical" href="https://ve7ppe-hugo-blog-public.pages.dev/posts/freebsd_adventures-yaac_aprs_th-d72/">
@@ -59,13 +60,19 @@ I&rsquo;m returning to FreeBSD after almost 10 years using Debian/Fedora for ham
           <img src="https://ve7ppe-hugo-blog-public.pages.dev/images/freebsd_3.gif" alt="images/freebsd_3.gif" class="post_thumbnail">
         
           <hr>
+<h6 id="update-dec-31-2024-1330">Update Dec-31-2024-1330</h6>
+<p>Corrected a few of the steps to make it all work properly.  Also testing a new update of YAAC that includes FreeBSD specific look-up for local JSSC.  See steps below to update the OpenJDK version from V8</p>
+<hr>
 <p>I&rsquo;m returning to FreeBSD after almost 10 years using Debian/Fedora for ham field laptop.  Its been an expected return with having to compile from source and/or search for obscure packages to get things to work.</p>
 <p>YAAC is one of the first ham programs to get installed to my older laptop with a fresh install of FreeBSD 14.2 running a XFCE desktop with 1Tb SSD.  Through trial and error, here are my steps to get YAAC communicating with both my GPS and TH-D72:</p>
 <ol>
 <li>$ su -</li>
 <li># pw groupmod dialer -m USER</li>
-<li># pkg install java/openjdk8 [tried openjdk22 &ndash;&gt; 11, all fail to find jssc, aka no serial ports.  Both YAAC &amp; FreeBSD jssc lib not found &gt;openjdk8]</li>
-<li># pkg install comms/java-simple-serial-connector [&gt;11yrs old, is from source for fork used by YAAC]</li>
+<li># pkg install comms/java-simple-serial-connector [&gt;11yrs old, is from source for fork used by YAAC, installs OpenJDK8]</li>
+<li># pkg install openjdk22</li>
+<li># cd /usr/ports/java/openjdk8</li>
+<li># make deinstall [removes only the openjdk8 package]</li>
+<li>$ java -version [in another non-root terminal view, should show V22]</li>
 <li># pkg install gpsd</li>
 <li>plug in GPS
 <ul>
@@ -86,7 +93,7 @@ I&rsquo;m returning to FreeBSD after almost 10 years using Debian/Fedora for ham
 <li># vi /etc/rc.conf
 <ul>
 <li>add: gpsd_enable=&ldquo;YES&rdquo;</li>
-<li>add: gpsd_device=&quot;/cuaU0&quot; [check your usb port, I will build a udev style rule for the GPS under FreeBSD]</li>
+<li>add: gpsd_devices=&quot;/cuaU0&quot; [check your usb port, I will build a udev style rule for the GPS under FreeBSD]</li>
 </ul>
 </li>
 <li># exit</li>
